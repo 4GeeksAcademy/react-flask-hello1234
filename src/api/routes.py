@@ -82,5 +82,5 @@ def login():
         "msg": "Inicio correctamente",
         "success": True,
         "user": user.serialize(),
-        "access_token": access_token,
+        "token": access_token,
     }), 200

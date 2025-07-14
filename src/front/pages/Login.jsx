@@ -26,8 +26,8 @@ const Login = () => {
             const data = await response.json();
             console.log('mensaje ' + data);
             if (data.success) {
-                localStorage.setItem("User", JSON.stringify(data));
-                localStorage.setItem("TOKEN", data.access_token);
+                sessionStorage.setItem("User", JSON.stringify(data.user));
+                sessionStorage.setItem("TOKEN", data.token);
                 alert(data.msg)
                 setTimeout(() => navigate("/private"), 1000);
             } else {
